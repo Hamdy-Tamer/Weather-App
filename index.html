@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+</head>
+<body>
+    <div class="weather-card">
+      <h1>Weather App</h1>
+        <div class="search-container">
+            <input type="text" placeholder="Enter the city name" spellcheck="false">
+            <button><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+        <div class="error-message">
+            <p></p>
+        </div>
+        
+        <div class="weather-results">
+
+            <!-- Row 1: City name and date -->
+            <div class="location-info">
+                <div class="city-date">
+                    <div class="city-container">
+                      <i class="fa-solid fa-location-dot location-icon"></i>
+                      <h2 class="city-name"></h2>
+                    </div>
+                    <p class="current-date"></p>
+                </div>
+            </div>
+            
+            <!-- Row 2: Weather icon and temperature -->
+            <div class="weather-main">
+                <img src="" class="weather-icon" alt="Weather icon">
+                <div class="temp-container">
+                    <h1 class="temperature"></h1>
+                    <p class="weather-description"></p>
+                </div>
+            </div>
+            
+            <!-- Row 3: Humidity and wind -->
+            <div class="weather-stats">
+                <div class="weather-stat">
+                    <img src="images/humidity.png" alt="Humidity">
+                    <div>
+                        <p class="humidity-value"></p>
+                        <p>Humidity</p>
+                    </div>
+                </div>
+                <div class="weather-stat">
+                    <img src="images/wind.png" alt="Wind">
+                    <div>
+                        <p class="wind-speed"></p>
+                        <p>Wind Speed</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Row 4: Hourly forecast -->
+            <div class="hourly-forecast">
+                <!-- Hour cards will be added dynamically by JavaScript -->
+            </div>
+
+            <!-- Row 5: Daily forecast -->
+            <div class="weekly-forecast">
+                <!-- Day cards will be added dynamically by JavaScript -->
+            </div>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
