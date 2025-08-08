@@ -1,4 +1,4 @@
-const apiKey = "Here Your API Code";
+const apiKey = "1eb1a317781f28a35ced4d0afa12d934";
 const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
 const forecastUrl = "https://api.openweathermap.org/data/2.5/forecast?units=metric&q=";
 const searchInput = document.querySelector(".search-container input");
@@ -57,7 +57,7 @@ function createDayCard(dayName, maxTemp, minTemp, icon, description) {
 async function fetchWeatherData(city) {
     if (!city) {
         showError("Enter the name of city first.");
-        alert('ERROR! Name of city isn\'t entered.');
+        alert('ERROR! Name of city or country isn\'t entered.');
         return;
     }
 
@@ -68,7 +68,7 @@ async function fetchWeatherData(city) {
         if (!currentResponse.ok) {
             if(currentResponse.status == 404){
               showError(`\'${searchInput.value}\' is not found. Check the spelling and try again`);
-              alert('ERROR! City doesn\'t exist.');
+              alert('ERROR! City or Country doesn\'t exist.');
             }
             else
             {
