@@ -11,6 +11,7 @@ body {
   justify-content: center;
   min-height: 100vh;
   padding: 16px;
+  overflow-x: hidden;
 }
 
 .weather-card {
@@ -216,4 +217,51 @@ body {
 
 .weather-results {
   display: none;
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 576px) {
+  body {
+    padding: 0;
+    margin: 0;
+  }
+
+  .weather-card {
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .weather-card h1 {
+    order: -2;
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+
+  .search-container {
+    order: -1;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .search-container input {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  .search-container button {
+    padding: 10px;
+    margin-left: 10px;
+  }
+
+  .weather-results {
+    flex: 1;
+    width: 100%;
+    overflow-y: auto;
+  }
 }
